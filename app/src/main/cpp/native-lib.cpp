@@ -1,11 +1,10 @@
 #include <jni.h>
-#include <string>
+#include <tung.hpp>
 
 extern "C" {
     jstring Java_kstn_tung_cli_MainActivity_stringFromJNI(JNIEnv *env, jobject);
 }
 
 jstring Java_kstn_tung_cli_MainActivity_stringFromJNI(JNIEnv *env, jobject) {
-    std::string hello = "Tạ Quang Tùng + Nguyễn Ngân";
-    return env->NewStringUTF(hello.c_str());
+    return env->NewStringUTF(get_string().c_str());
 }
